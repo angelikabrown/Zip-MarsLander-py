@@ -1,3 +1,4 @@
+from marslander.DescentEvent import DescentEvent
 
 
 class Vehicle:
@@ -24,7 +25,7 @@ class Vehicle:
         self.fuel = 12000
         self.burn = 0
         self.flying = Vehicle.FLYING
-        pass
+       #pass
 
     def check_final_status(self):
         s = ""
@@ -60,7 +61,7 @@ class Vehicle:
         # subtract speed from Altitude
         self.altitude = self.velocity - self.altitude
         # subtract burn amount fuel used from tank
-
+        self.fuel = burnAmount - self.fuel
         #pass
 
     def still_flying(self):
@@ -74,5 +75,6 @@ class Vehicle:
     def get_status(self, tick):
         # create a return a new DescentEvent object
         # filled in with the state of the vehicle.
-        pass
+        descent = DescentEvent(tick, self.velocity,self.fuel, self.altitude, self.status)
+        return descent
 
