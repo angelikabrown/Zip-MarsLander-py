@@ -75,6 +75,6 @@ class Vehicle:
     def get_status(self, tick):
         # create a return a new DescentEvent object
         # filled in with the state of the vehicle.
-        descent = DescentEvent(tick, self.velocity,self.fuel, self.altitude, self.status)
+        descent = DescentEvent(tick, self.velocity,self.fuel, self.altitude,self.flying)
         return descent
 

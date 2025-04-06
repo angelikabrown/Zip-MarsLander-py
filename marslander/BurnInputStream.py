@@ -1,3 +1,8 @@
+from turtledemo.clock import tick
+
+from marslander.DescentEvent import DescentEvent
+
+
 class BurnInputStream:
     def get_next_burn(self, status):
         while True:
@@ -11,6 +16,6 @@ class BurnInputStream:
 
 # Example usage:
 # burn_input_stream = BurnInputStream()
-# status = None  # Replace with actual DescentEvent object
+# status = DescentEvent()
 # burn = burn_input_stream.get_next_burn(status)
 # print(burn)
