@@ -59,9 +59,9 @@ class Vehicle:
         # set new velocity to result of computeDeltaV function.
         self.velocity = self.compute_deltaV()
         # subtract speed from Altitude
-        self.altitude = self.velocity - self.altitude
+        self.altitude = self.altitude - self.velocity
         # subtract burn amount fuel used from tank
-        self.fuel = burnAmount - self.fuel
+        self.fuel = self.fuel - self.burn
         #pass
 
     def still_flying(self):

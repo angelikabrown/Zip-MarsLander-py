@@ -17,4 +17,4 @@ class BurnDataStream:
             self.burn_idx += 1
             print(self.burn_array[self.burn_idx])  # hack!
             return self.burn_array[self.burn_idx]
-        return 0
+        return status
